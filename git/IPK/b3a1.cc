@@ -1,6 +1,21 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <algorithm>
+
+std::vector<double> swapVector(std::vector<double>& v){
+	double a;
+	double b;
+	for(int i=0; i<(v.size()/2); i++){
+		a = v[i];
+		b = v[v.size()-i-1];
+		std::swap(a,b);
+		v[i] = a;
+		v[v.size()-i-1]=b;
+	} for (int k=0; k<v.size(); k++){
+		std::cout << v[k] << std::endl;
+	}
+}
 
 std::vector<double> reversed(const std::vector<double>& v){
 	std::vector<double> f(v.size()-1);
@@ -52,6 +67,7 @@ int main(){
 		vv[i] = z; 
 		std::cout << vv[i] << std::endl;
 	}
-	
+	std::cout << std::endl;
+	swapVector(v);
 
 }
