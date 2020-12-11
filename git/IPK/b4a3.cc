@@ -33,4 +33,10 @@ void print_frequencies(const std::map<char,int>& frequencies){
         std::cout << it.first << " - " << it.second << std::endl;   
     }
 }
-    
+
+int main(){
+	get_frequencies();
+	print_frequencies(get_frequencies());
+	
+	return 0;
+}    
