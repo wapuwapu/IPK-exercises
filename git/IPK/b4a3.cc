@@ -13,9 +13,8 @@ std::map<char,int> get_frequencies(){
         }
         if(std::islower(cha)){
             cha = std::toupper(cha);
-        }
-	bool std::isalpha(char cha) c;
-        if(c == true){
+     	}
+        if(std::isalpha(cha) == true){
                 m[cha]++; 
                 count++;
            
@@ -24,7 +23,7 @@ std::map<char,int> get_frequencies(){
     return m;
 }
 
-void print_frequencies(const std::map<char,int>& frequencies){
+void print_frequencies(std::map<char,int>& frequencies){
     std::map<char,int>::iterator it;
     for(it=frequencies.begin(); it != frequencies.end(); it++){
         std::cout << it->first << " - " << it->second << std::endl;   
@@ -32,8 +31,8 @@ void print_frequencies(const std::map<char,int>& frequencies){
 }
 
 int main(){
-	get_frequencies();
-	print_frequencies(get_frequencies());
+	std::map<char,int>m = get_frequencies();
+	print_frequencies(m);
 	
 	return 0;
 }    
