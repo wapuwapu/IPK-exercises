@@ -14,12 +14,13 @@ std::map<char,int> get_frequencies(){
         if(std::islower(cha)){
             cha = std::toupper(cha);
         }
-        if(bool std::isalpha(char cha)== true){
+	bool std::isalpha(char cha) c;
+        if(c == true){
             if(m.find(cha) == m.end()){
-                m.insert(make_pair(char,1));
+                m.insert(make_pair(char,1)); //initialisiert
                 count++;
             }else{
-                m[cha]++;
+                m[cha]++; // weiter hochzählen
                 count++;
             }
         }        
@@ -29,7 +30,7 @@ std::map<char,int> get_frequencies(){
 
 void print_frequencies(const std::map<char,int>& frequencies){
     std::map<char,int>::iterator it;
-    for(auto it : frequencies){
+    for(it=frequencies.begin(); it != frequencies.end(); it++){
         std::cout << it.first << " - " << it.second << std::endl;   
     }
 }
