@@ -16,13 +16,9 @@ std::map<char,int> get_frequencies(){
         }
 	bool std::isalpha(char cha) c;
         if(c == true){
-            if(m.find(cha) == m.end()){
-                m.insert(make_pair(char,1)); //initialisiert
+                m[cha]++; 
                 count++;
-            }else{
-                m[cha]++; // weiter hochzählen
-                count++;
-            }
+           
         }        
     }
     return m;
@@ -31,7 +27,7 @@ std::map<char,int> get_frequencies(){
 void print_frequencies(const std::map<char,int>& frequencies){
     std::map<char,int>::iterator it;
     for(it=frequencies.begin(); it != frequencies.end(); it++){
-        std::cout << it.first << " - " << it.second << std::endl;   
+        std::cout << it->first << " - " << it->second << std::endl;   
     }
 }
 
